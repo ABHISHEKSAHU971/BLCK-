@@ -1,0 +1,278 @@
+@font-face {
+    font-family: "voyage";
+    src: url(/font/voyage/Voyage-Bold.ttf);
+    font-weight:600;
+
+}
+@font-face {
+    font-family: "voyage";
+    src: url(/font/voyage/Voyage-Regular.ttf);
+    font-weight:100;
+}
+@font-face {
+    font-family: "gilroy";
+    src: url(/font/gilroy/Gilroy-Regular.otf);
+    font-weight:100;
+}
+@font-face {
+    font-family: "gilroy";
+    src: url(/font/gilroy/Gilroy-Bold.otf);
+    font-weight:600;
+}
+
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;  
+}
+#main #left{
+    width: 50vw;
+    height:100vh;
+    background-image: linear-gradient(to top right, rgb(0, 0, 0),#18171B ,#28262A);
+    /* opacity: 0; */
+    flex: 1;
+    transition: 1s;
+    
+}
+#main #left:hover{
+    flex:1.3;
+
+}
+#main #left:hover ~ #main #right #naam{
+    margin-left: -18.6vw; 
+    
+
+}
+
+#nav{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100vw;
+    height: 12vh;
+    padding:30px 20px;
+    color:white;
+    /* font-family: "voyage"; */
+    /* background-color: red; */
+    
+}
+#nav h1{
+    line-height:28px;
+    font-size:30px;
+    font-family: "voyage";
+}
+#nav #men a{
+    text-decoration: none;
+    color:white;
+    font-family: "gilroy";
+    margin-right: 40px;
+    font-size: 20px;
+}
+#nav #men{
+    margin-left:70px;
+}
+
+#nav #men a:hover{
+    color:pink;
+}
+#nav #user i:hover{
+    cursor: pointer;
+    color:pink;
+}
+#nav #user i{
+    margin-left:20px;
+}
+#nav #user i:nth-child(4){
+    display:none;
+}
+#left  img{
+    /* margin-top: 11vw; */
+    /* margin-left: 10vw; */
+    position:absolute;
+    width: 27vw;
+    margin-left: 9vw;
+    bottom: 0;
+    
+    
+}
+#left #icon{
+    position:absolute;
+    top: 22vw;;
+    display: flex;
+    flex-direction: column;
+    color:white;
+    margin-left:1.5vw;
+    
+}
+#left #icon i{
+    margin-top:1vw;
+    font-size:20px;
+
+}
+#main #right{
+    width: 50vw; 
+    height:100vh;
+    background-image: linear-gradient(to right,#353535,rgb(32, 32, 32));
+    flex: 1;
+    transition: 1s;
+    
+}
+#main #right:hover{
+    flex:1.3;
+}
+#main :hover ~ .cursor{
+    /* width: 60vw; */
+    transform: scale(4);
+
+}
+#main #left:hover ~ .cursor{
+    
+    transform: scale(3);
+
+}
+
+#right img{
+    position:absolute;
+    width: 30vw;
+    margin-left: 12vw;
+    bottom: 0;
+    
+    
+}
+#main #naam{
+    position:absolute; 
+    /* left:; */
+    margin-top:20vw;
+    margin-left: 35.4vw; 
+    color:rgb(117, 117, 117);
+    text-align: center;
+    font-size:30px;
+    font-family: "gilroy";
+    line-height:50px;
+    
+    
+}
+#naam button{
+    padding:0.8vw 3vw;
+    border-radius:20vw;
+    background-image:linear-gradient(to right,pink 50%,rgb(109, 109, 221) 50%);
+    border:none;
+    font-size:0.9vw;
+    font-weight: bold;
+    margin:3vw;
+    cursor: pointer;
+}
+
+
+#line{
+    position:absolute;
+    width:100vw;
+    height:.5vw;
+    background-color: pink;
+    bottom:0;
+    /* opacity: 0; */
+}
+.single-item{
+    position:absolute;
+    top:22vw;
+    right:0;
+    margin-right:1.2vw;
+    color:rgb(255, 255, 255);
+    font-size:15px;
+}
+.single-item li:nth-child(1){
+    color:rgb(255, 153, 170);
+}
+.cursor{
+    position:fixed;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background-color:#fff;
+    transition:0.1s;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+#left img  :hover .cursor{
+    transform: scale(1.5);
+    /* width:50px;
+    height:50px;
+    border-radius:50%;  */
+}
+#img #mp{
+    display:none;
+}
+
+@media(max-width:500px){
+    #main{
+        display:initial;
+    }
+    #main #left{
+        width:100vw;
+    }
+    #main #right{
+        display:none;
+        position: relative; 
+         width:100vw;
+    }
+    #nav #men{
+        display:none;
+    }
+    #nav h1{
+        font-size:35px;
+    }
+    #nav #user i{
+        font-size:27px;
+    }
+
+    #nav #user i:nth-child(3){
+        display:none;
+    }
+    #nav #user i:nth-child(2){
+        display:none;
+    }
+    #nav #user i:nth-child(4){
+        display:initial;
+    }
+    #left #icon{
+        display:none;
+    }
+    #right .single-item{
+        display:none;
+
+    }
+    #left img{
+        bottom:-110px;
+        width:86vw;
+        margin-left: 4vw;
+    }
+    #main #naam{
+        margin-top: 30vw;
+        margin-left: 3.5vw;
+        font-size:24px;
+        line-height:43px;
+    }
+    #line{
+        bottom:-110px;
+    }
+    #naam button{
+    padding:1.5vw 4vw;
+    color:black;
+    font-size:10px;
+    }
+    
+
+    
+    
+}          
