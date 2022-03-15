@@ -1,16 +1,7 @@
 var tl = gsap.timeline()
 
 tl
-    // .from("#left", {
-    //     width: 0,
-    //     duration:2,
-    //     ease:Power4.easeInOut,
-    // })
-    // .from("#right", {
-    //     width: 0,
-    //     duration: 1,
-    //     ease:Expo.easeInOut,
-    // }, "-=1")
+   
     .from(".single-item", {
         opacity: 0,
         x: 15,
@@ -43,12 +34,6 @@ tl
     })
 
 
-
-// const cursor = document.querySelector('.cursor');
-// document.addEventListener('mousemove', (e) => {
-//     cursor.style.left = e.pageX + 'px';
-//     cursor.style.left = e.pagey + 'px';
-// })    
 
 var circle =document.querySelector(".cursor")
 const onMouseMove = function (dets) {
